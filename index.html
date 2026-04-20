@@ -1,31 +1,102 @@
 <html>
-
 <head>
-    <title>Sneakers</title>
+<title>Sneakers</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
+
+.container {
+    width: 350px; 
+    margin: 80px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+
+img {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+#msg {
+    display: none;
+    background: green;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+</style>
+
+<script>
+function showMsg() {
+    let m = document.getElementById("msg");
+    m.style.display = "block";
+
+    setTimeout(function() {
+        m.style.display = "none";
+    }, 2000);
+}
+</script>
+
 </head>
 
 <body>
 
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" width="200">
+<div class="container">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
 
 <h2>Stylish Sneakers</h2>
 
-<p>Price: ₹2999</p>
+<p class="price">₹2999</p>
 
-<p>Color:</p>
+<p>Color:
 <input type="radio"> Red
 <input type="radio"> Blue
+<input type="radio"> black
+</p>
 
-<p>Size:</p>
+<p>Size:
 <input type="radio"> 7
 <input type="radio"> 8
+<input type="radio"> 9
+</p>
 
-<br><br>
+<button onclick="showMsg()">Add to Cart</button>
 
-<button>Add to Cart</button>
+<div id="msg">Added to Cart!</div>
 
-<p>Review: Good product </p>
+<p> Good product</p>
+
+</div>
 
 </body>
-
 </html>
+```
